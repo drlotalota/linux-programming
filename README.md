@@ -48,7 +48,7 @@ Now you can go to your project folder using **cd** command. Just type
 
 We get back to Git later. Just fetch latest codes from repository using command
 
-  `$git fetch`
+  `$git pull`
 
 To compile main.c type to console
 
