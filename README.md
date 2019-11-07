@@ -58,6 +58,36 @@ To run main application you have to say terminal you want to execute application
 
   `$./fantastic`
 
-I'll comment what that application does to source files, write readme for gcc, explain what is source file, what is header file, why we should make Makefile, etc. later. Just wanted to push these changes to Git real quick.
+Lesson #03
 
-...to be continued soon. Hopefully tonight.
+In lesson #02 we saw very simple application and process how you write and run C application. You write source code, compile it to executable and execute it. When we start adding more files to project it gets painful to compile from the command line. Compiling one main.c file is fairly simple
+
+`$gcc main.c -o fantastic`
+
+When we add some source files it starts to get annoying to update compiling command, not to mention when we get to libraries, compiler flags, compilation flags, folder structures and so on.
+
+`$gcc main.c tools.c toiletbrush.c anaconda.c alarm.c -ali-g.c -o fantastic`
+
+To make everything easier I created **Makefile**. It will take care of that complexity. It contains rules how to build application and gives them to **make** which is a build automation tool. Simple explanation from Wikipedia:
+
+> In software development, Make is a build automation tool that automatically builds executable programs and libraries from source code by reading files called Makefiles which specify how to derive the target program.
+
+Once you have created Makefile to your project you can skip gcc command and just type make in your project folder. So lets try. Pull latest codes from the project folder using pull.
+
+`$git pull`
+
+You should see now Makefile there. After that you can simply type make to compile your fantastic application
+
+`$make`
+
+I created target clean which removes executable as well. So if you want to be sure your latest changes are in your project you can first clean all the existing stuff from you project with commands
+
+`$make clean`
+
+It will delete your executable called fantastic. Often you want to clean your project first and then compile it. You can pipe commands in Linux with X && Y which means you execute first command X and if that does not fail you execute command Y. Few examples to understand
+
+`$make clean && make && ./fantastic # If make clean does not fail, make is executed right after that and and if make commands does not fail you execute your fantastic application`
+
+`$echo "I am the Great Cornholio! You can call me" && whoami # Will echo text to terminal, if that does not fail it tells you which user is logged to your Linux`
+
+I'll push in generic Makefile in soon, but let's not pay attention for it yet. It's pain in the ass to work with. It just makes everything easier for now.
