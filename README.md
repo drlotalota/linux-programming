@@ -59,6 +59,7 @@ To run main application you have to say terminal you want to execute application
   `$./fantastic`
 
 Lesson #03
+---------
 
 In lesson #02 we saw very simple application and process how you write and run C application. You write source code, compile it to executable and execute it. When we start adding more files to project it gets painful to compile from the command line. Compiling one main.c file is fairly simple
 
