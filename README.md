@@ -1,7 +1,52 @@
+
+[//]: # (README.md)
+
 Linux programming
 =================
 
 I started by creating GitHub account. You don't need one, but I can share stuff here easily and we don't have to share some fishy mails and packages. In case you feel need to create an account for yourself [click me](https://github.com/join).
+
+Quick start - Instructions
+==========================
+
+Project structure
+-----------------
+
+```
+.
+├── include
+│   ├── All .h files are here
+│   └── utils.h
+├── lib
+│   ├── All 3rd party libraries (.a files) are here
+│   └── example.a (does not exist)
+├── Makefile
+├── obj
+│   ├── All .o files will be placed here
+│   ├── main.o
+│   └── utils.o
+├── README.md
+└── src
+    ├── All .c files are here
+    ├── main.c
+    └── utils.c
+
+```
+To compile project you have to navigate root folder of project and type command
+```
+$make
+```
+To clean project you can give target **clean** to **make**
+```
+$make clean
+```
+To run compiled application
+```
+$./application
+```
+
+Lessons
+=======
 
 Lesson #01
 ----------
